@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% block title %}Yootel{% endblock %}</title>
+    <link rel="icon" type="image/png" href="{{ asset('bundles/front/images/favicon.png') }}" sizes="32x32">
+    {% block head %}
+	    {% include 'FrontBundle:Common:head_styles.html.twig' %}
+        {% include 'FrontBundle:Common:head_scripts.html.twig' %}
+    {% endblock %}
+</head>
+<body class="hold-transition lockscreen {{ body_class is defined ? body_class : '' }}">
+    {% block body %}
+
+    {% endblock %}
+    {% include 'FrontBundle:Common:footer_scripts.html.twig' %}
+    {% block script %}{% endblock %}
+</body>
+</html>

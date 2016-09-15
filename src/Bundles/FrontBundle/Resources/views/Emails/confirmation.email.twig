@@ -1,0 +1,18 @@
+{% block subject %}Votre inscription sur Yootel a bien été enregistrée{% endblock %}
+
+{% block body_text %}
+{% autoescape false %}
+
+{% endautoescape %}
+{% endblock %}
+
+{% block body_html %}
+Bonjour et bienvenue sur Yootel,<br/>
+
+<div>Pour valider définitivement votre inscription, rien de plus simple ! Cliquez sur <a style="display: block;width: 115px;height: 15px;background: #D23B3A;border-bottom:2px solid #666;padding: 8px;text-align: center;text-decoration: none;border-radius: 1px;color: white;font-weight: bold;" href="{{ confirmationUrl }}">Je confirme</a></div>
+Si vous avez des questions, n'hésitez pas à nous contacter à l'adresse suivante : contact@yootel.com<br/><br/>
+
+Merci et à tout de suite !<br/>
+L'équipe Yootel
+{% endblock %}
+ 

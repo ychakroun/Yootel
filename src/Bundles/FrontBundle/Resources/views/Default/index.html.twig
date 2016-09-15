@@ -1,0 +1,44 @@
+{% extends 'FrontBundle::layout.html.twig' %}
+
+{% block body %}
+    <div class="lockscreen-wrapper">
+        <div class="lockscreen-logo">
+            <a href="#"><b>Yoo</b>tel</a>
+        </div>
+
+        {#<div class="bfh-selectbox bfh-countries" data-country="US" data-flags="true">
+            <input type="hidden" value="">
+            <a class="bfh-selectbox-toggle" role="button" data-toggle="bfh-selectbox" href="#">
+                <span class="bfh-selectbox-option input-medium" data-option=""></span>
+                <b class="caret"></b>
+            </a>
+            <div class="bfh-selectbox-options"></div>
+        </div>#}
+        <div class="form-group">
+            <select class="selectpicker form-control" id="country">
+                <option value="" selected></option>
+                <option value="fr">France</option>
+                <option value="tn">Tunisie</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <select class="selectpicker form-control hidden" id="states"></select>
+        </div>
+        <div class="form-group clearfix hidden" id="trunk">
+            <div class="radio col-lg-6">
+                <label><input type="radio" value="emission" name="trunk"><span>Emission</span></label>
+            </div>
+            <div class="radio col-lg-6">
+                <label><input type="radio" value="reception" name="trunk"><span>Réception</span></label>
+            </div>
+            <div class="radio col-lg-12">
+                <label><input type="radio" value="reception" name="trunk"><span>Emission&nbsp;/&nbsp;Réception</span></label>
+            </div>
+        </div>
+        <a href="{{ '/register' }}" class="btn btn-primary col-lg-12 hidden" id="btn-submit">Acheter</a>
+        <div class="lockscreen-footer text-center">
+            Copyright &copy; 2016 <b><a href="http://yootel.tn" class="text-black">Cha9chi Studio</a></b><br>
+            All rights reserved
+        </div>
+    </div>
+{% endblock %}

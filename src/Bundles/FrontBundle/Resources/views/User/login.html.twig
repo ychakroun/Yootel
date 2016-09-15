@@ -1,0 +1,49 @@
+{% extends "FrontBundle::layout.html.twig" %}
+{% trans_default_domain 'FOSUserBundle' %}
+{% block title %}Login{% endblock %}
+{% block body %}
+<div class="login-box">
+	<div class="login-logo">
+		<a href="/"><b>Yoo</b>tel</a>
+	</div>
+	<div class="login-box-body">
+		{% set flashMessages = app.session.flashbag.get('success') %}
+		{% if flashMessages %}
+			{% for flashMessage in flashMessages %}
+				<div class="alert alert-success fade in">
+					{{ flashMessage }}
+					<a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+				</div>
+			{% endfor %}
+		{% endif %}
+		{% if error %}
+			<div class="alert alert-danger"><p>{{ error.messageKey|trans(error.messageData, 'security') }}</p></div>
+		{% endif %}
+		<form action="{{ path("fos_user_security_check") }}" method="post">
+			<div class="form-group has-feedback">
+				<input type="email" name="_username" class="form-control" placeholder="nom@example.com" value="{{ last_username }}" />
+				<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+			</div>
+			<div class="form-group has-feedback">
+				<input type="password" class="form-control" name="_password" placeholder="******" />
+				<span class="glyphicon glyphicon-lock form-control-feedback"></span>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<button type="submit" class="btn btn-primary btn-block btn-flat">Connexion</button>
+				</div>
+			</div>
+		</form>
+
+		{% if app.request.query.get('redirect') is defined %}
+			<input type="hidden" name="_target_path" value="{{ app.request.query.get('redirect') }}" />
+		{% endif %}
+		<input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+
+		<br>
+		{#<a href="{{ path('fos_user_resetting_request') }}">Mot de passe oublié ?</a>#}
+		<a href="{{ path('fos_user_registration_register') }}" class="text-center">Pas encore de compte ? Inscrivez-vous !</a>
+
+	</div>
+	</div>
+{% endblock %}

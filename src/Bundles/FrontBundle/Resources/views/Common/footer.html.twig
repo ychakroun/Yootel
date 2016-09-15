@@ -1,0 +1,43 @@
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h3>Besoin d'aide ?</h3>
+                <ul>
+                    <li><a href="call:0624044913">06 24 04 49 13</a></li>
+                    <li><a href="mailto:contact@custommyart.com">Contactez-nous</a></li>
+                    <li>
+                        <ul>
+                            <li><a href="{{ url('faq_particuliers') }}">FAQ Particuliers</a></li>
+                            <li><a href="{{ url('faq_artistes') }}">FAQ Artistes</a></li>
+                            <li><a href="{{ url('faq_complement') }}">FAQ Complementaire</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <h3>A propos</h3>
+                <ul>
+                    <li><a href="{{ url('concept') }}">Le concept</a></li>
+                    <li><a href="{{ asset( 'pdf/CGV_CMA_VF.pdf' ) }}" target="_blank">CGV</a> & <a href="{{ asset( 'pdf/CGU_CMA_VF.pdf' ) }}" target="_blank">CGU</a> CMA</li>
+                    <li><a href="{{ asset( 'pdf/Mangopay_Terms-FR.pdf' ) }}" target="_blank">CGU MANGOPAY</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-12">
+                <h3>Recevoir notre newsletter</h3>
+                <p>Toutes les actualités concernat Custom My Art et ses artistes dans votre messagerie</p>
+                <div class="email">
+                    <input class="text" type="email" placeholder="Votre adresse e-mail" required>
+                    <button type="submit" class="button"><span class="valider">S'abonner</span></button>
+                </div>
+                <h3>Nous suivre</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/custommyart">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/custommyart/">Instagram</a></li>
+                    <li><img src="{{ asset('bundles/front/images/powered-by-mangopay.png') }}" class="img-responsive" alt="powred by mangopay"/></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,16 @@
+#users_table a.icons {
+  margin: 0 4px;
+}
+#devis_table_filter label {
+  float: right;
+}
+.chat .item>.message {
+  margin-top: 0;
+}
+.imgLiquidFill,.imgLiquidFill img { max-width: 100%; }
+
+.comment_trash { float: left; }
+
+#imageAll ul, .box-body ul { list-style-type: none; margin: 0; padding: 0;}
+.box-body li { padding: 20px 10px 20px 10px; border-bottom: 1px solid #ccc;}
+tr.green td { background-color: darkgreen; padding: 5px;color: white;}
